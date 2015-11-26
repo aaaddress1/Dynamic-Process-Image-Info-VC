@@ -1,6 +1,3 @@
-﻿// Test.cpp : 定義主控台應用程式的進入點。
-//
-
 #include "stdafx.h"
 #include <windows.h>
 #include <tchar.h>
@@ -36,7 +33,7 @@ int main(int argc, TCHAR* argv[])
 	//StartupInfo.wShowWindow = SW_HIDE;
 	PROCESS_INFORMATION ProcessInfo;
 
-	if (!CreateProcessA("C:\\windows\\notepad.exe", " /uninstsp", NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &StartupInfo, &ProcessInfo))
+	if (!CreateProcessA("C:\\windows\\notepad.exe", NULL, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &StartupInfo, &ProcessInfo))
 	{
 		printf("CreateProcess() failed with error 0x%08X\n", GetLastError());
 		system("PAUSE");
